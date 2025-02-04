@@ -3,7 +3,14 @@ body > main > section.contact-section > div.container{
     padding-bottom: 100px; /* 푸터와 겹치지 않도록 하단 여백 추가 */
 }
 
-
+@media (min-width: 768px) {
+    .container {
+      max-width: 800px;
+      margin: 0 auto; /* 좌우 자동 여백으로 중앙 정렬 */
+      padding-left: 20px; /* 원하는 만큼 조정 */
+      padding-right: 20px;
+    }
+  }
 
 /* info 영역 시작 */
 .info-section {
