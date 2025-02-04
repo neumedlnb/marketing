@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     formData.append('userEmail', form.userEmail.value);
     formData.append('userPhone', form.userPhone.value);
     formData.append('desiredFee', form.desiredFee.value);
+    formData.append('category', form.category.value);
+    formData.append('visitor', form.visitor.value);
 
     // **5. 키클래오 제품 급여 경험** (이 항목은 바로 희망원고료 다음에 추가)
     var productExperience = form.querySelectorAll('input[name="product_experience[]"]:checked');
@@ -87,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     formData.append('privacy', "동의");
 
-    var scriptURL = 'https://script.google.com/macros/s/AKfycbywB47TJWa1D0KMUhZoExJ8nRcN06wrH3U-TaCXgmq1gMe0Q_dT6fPqU81qvCdZD_bd/exec';
+    var scriptURL = 'https://script.google.com/macros/s/AKfycbybPSE4RM_xBHhO5EPoX3aoOuSBm0AP4Jyje_ZSCPympCf45Pg-IQ1CyJgAcLNjiz7-/exec';
 
     fetch(scriptURL, {
       method: 'POST',
