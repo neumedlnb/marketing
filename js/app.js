@@ -20,21 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var formData = new URLSearchParams();
 
-    // 1. 성함, 2. 이메일, 3. 전화번호, 4. 희망원고료
+    // 1. 성함, 2. 이메일, 3. 전화번호, 4. 희망원고료, 5.카테고리, 6.팔로워, 7.블로그 또는 매체 URL
     formData.append('userName', form.userName.value);
     formData.append('userEmail', form.userEmail.value);
     formData.append('userPhone', form.userPhone.value);
     formData.append('desiredFee', form.desiredFee.value);
     formData.append('category', form.category.value);
     formData.append('visitor', form.visitor.value);
+    formData.append('blog', form.blog.value);
 
-    // **5. 키클래오 제품 급여 경험** (이 항목은 바로 희망원고료 다음에 추가)
+    // **8. 키클래오 제품 급여 경험** (이 항목은 바로 희망원고료 다음에 추가)
     var productExperience = form.querySelectorAll('input[name="product_experience[]"]:checked');
     productExperience.forEach(function(item) {
       formData.append('product_experience[]', item.value);
     });
 
-    // 6. 제공 가능한 콘텐츠 유형
+    // 9. 제공 가능한 콘텐츠 유형
     var contentTypes = form.querySelectorAll('input[name="content_type[]"]:checked');
     contentTypes.forEach(function(item) {
       formData.append('content_type[]', item.value);
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     formData.append('privacy', "동의");
 
-    var scriptURL = 'https://script.google.com/macros/s/AKfycbybPSE4RM_xBHhO5EPoX3aoOuSBm0AP4Jyje_ZSCPympCf45Pg-IQ1CyJgAcLNjiz7-/exec';
+    var scriptURL = 'https://script.google.com/macros/s/AKfycbzx8zh_bcod9KylTsYdmUmiA0EB3M7txVk9BYKZjjha-MQCf-2b2pjvGOQ831S1e9Jc/exec';
 
     fetch(scriptURL, {
       method: 'POST',
