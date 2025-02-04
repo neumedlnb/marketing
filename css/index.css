@@ -4,155 +4,6 @@ body > main > section.contact-section > div.container{
 }
 
 
-/* 비디오 배경 설정 */
-.background-video {
-    width: 100vh; /* 기본값: 화면 너비의 40% */
-    height: auto; /* 비디오의 비율을 유지 */
-    position: absolute; /* 절대 위치로 설정하여 배경처럼 사용 */
-    top: 50%; /* 수직 중앙 정렬을 위한 설정 */
-    left: 50%; /* 수평 중앙 정렬을 위한 설정 */
-    transform: translate(-50%, -50%); /* 중앙 정렬 */
-    z-index: 1; /* 비디오를 텍스트 뒤에 배치 */
-}
-
-/* 모바일 스타일 */
-@media (max-width: 768px) { /* 화면 너비가 768px 이하일 때 */
-    .background-video {
-        width: 100%; /* 모바일에서는 100% */
-        height: 50vh; /* 비디오의 비율을 유지 */
-    }
-}
-
-/* PC 스타일 */
-@media (min-width: 769px) { /* 화면 너비가 769px 이상일 때 */
-    .background-video {
-        width: 25%; /* PC에서는 25% */
-    }
-}
-
-
-/* 메인 타이틀 텍스트 */
-.banner-text {
-    position: relative; /* 상대 위치로 설정하여 텍스트가 비디오 위에 표시되도록 함 */
-    z-index: 2; /* 텍스트가 비디오보다 위에 표시 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    color: white; /* 텍스트 색상을 흰색으로 설정 */
-}
-.main_title {
-    font-size: 40px;
-    cursor: pointer;
-}
-.main_sub_title {
-    font-size: 24px;
-}
-
-/* 배경 비디오를 헤더 높이만큼 제외한 화면을 꽉 채우도록 설정 */
-.banner {
-    position: relative;
-    background-color: black; /* 배경을 검은색으로 설정 */
-    display: flex;
-    justify-content: center; /* 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
-    height: 67vh; /* 배너의 높이를 전체 화면 높이로 설정 */
-    overflow: hidden; /* 비디오가 배너 영역을 넘지 않도록 설정 */
-}
-
-/* 모바일 스타일 */
-@media (max-width: 768px) { /* 화면 너비가 768px 이하일 때 */
-    .banner {
-        position: relative;
-        background-color: black; /* 배경을 검은색으로 설정 */
-        display: flex;
-        justify-content: center; /* 중앙 정렬 */
-        align-items: center; /* 수직 중앙 정렬 */
-        height: 100vh; /* 배너의 높이를 전체 화면 높이로 설정 */
-        overflow: hidden; /* 비디오가 배너 영역을 넘지 않도록 설정 */
-    }
-}
-
-
-
-/* 메인 타이틀 텍스트 */
-.banner-text h1 {
-    font-size: 34px;
-}
-.banner-text p {
-    font-size: 22px;
-}
-
-
-
-
-/* info 영역 더보기 버튼 */
-.more-button {
-    position: relative; /* 버튼 내에서 상대 위치 설정 */
-    background-color: transparent; /* 배경색 투명 */
-    border: none; /* 테두리 제거 */
-    color: white; /* 글씨 색상 */
-    font-size: 18px; /* 글씨 크기 */
-    cursor: pointer; /* 커서 모양 변경 */
-    overflow: visible; /* 내용이 잘리지 않도록 설정 */
-    margin-top: 10px;
-}
-
-.more-text {
-    display: inline-block; /* 텍스트를 블록으로 설정하여 애니메이션 가능 */
-    transition: transform 0.3s ease; /* 텍스트 이동 애니메이션 */
-}
-
-.arrow {
-    position: absolute; /* 화살표를 절대 위치로 설정 */
-    left: -20px; /* 기본 위치 */
-    opacity: 0; /* 기본적으로 보이지 않음 */
-    transition: left 0.3s ease, opacity 0.3s ease; /* 위치 및 투명도 애니메이션 */
-}
-
-.more-button:hover .more-text {
-    transform: translateX(20px); /* 텍스트 오른쪽으로 이동 */
-}
-
-.more-button:hover .arrow {
-    left: 0; /* 화살표의 위치 조정 */
-    opacity: 1; /* 화살표 보이기 */
-}
-
-/* info 영역 더보기 버튼 끝 */
-
-/* 빌런 히어로 영역 더보기 버튼 */
-.more-button-2 {
-    position: relative; /* 버튼 내에서 상대 위치 설정 */
-    background-color: transparent; /* 배경색 투명 */
-    border: none; /* 테두리 제거 */
-    color: rgb(0, 0, 0); /* 글씨 색상 */
-    font-size: 18px; /* 글씨 크기 */
-    cursor: pointer; /* 커서 모양 변경 */
-    overflow: visible; /* 내용이 잘리지 않도록 설정 */
-    margin-top: 40px;
-}
-
-.more-text-2 {
-    display: inline-block; /* 텍스트를 블록으로 설정하여 애니메이션 가능 */
-    transition: transform 0.3s ease; /* 텍스트 이동 애니메이션 */
-}
-
-.arrow-2 {
-    position: absolute; /* 화살표를 절대 위치로 설정 */
-    left: -20px; /* 기본 위치 */
-    opacity: 0; /* 기본적으로 보이지 않음 */
-    transition: left 0.3s ease, opacity 0.3s ease; /* 위치 및 투명도 애니메이션 */
-}
-
-.more-button-2:hover .more-text-2 {
-    transform: translateX(20px); /* 텍스트 오른쪽으로 이동 */
-}
-
-.more-button-2:hover .arrow-2 {
-    left: 0; /* 화살표의 위치 조정 */
-    opacity: 1; /* 화살표 보이기 */
-}
-
-/* 빌런 히어로 영역 더보기 버튼 끝 */
-
 
 /* info 영역 시작 */
 .info-section {
@@ -197,6 +48,14 @@ body > main > section.contact-section > div.container{
     opacity: 0; /* 기본적으로 숨김 */
     transition: opacity 0.3s; /* 부드러운 전환 효과 */
 }
+
+
+/* 768px 이상일 때만 70% 적용 */
+@media (min-width: 768px) {
+    .contact-form {
+      width: 70%;
+    }
+  }
 
 /* 기본적인 스타일에서 모바일에서는 항상 텍스트 보이기 */
 @media only screen and (max-width: 768px) {
@@ -256,70 +115,10 @@ body > main > section.contact-section > div.container{
 /* info 영역 끝 */
 
 
-/* 파트너 섹션 스타일 */
-.partners {
-    padding: 20px 0; /* 상하 패딩 */
-}
-
-.partners h2 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.partners p {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.partners-list {
-    overflow: hidden; /* 슬라이더를 위한 오버플로우 설정 */
-    position: relative; /* 자식 요소 위치 조정을 위해 relative 설정 */
-}
-
-/* 로고 슬라이더 */
-.logo-slider {
-    display: flex;
-    justify-content: flex-start; /* 왼쪽 정렬로 변경 */
-    flex-wrap: nowrap; /* 한 줄로 유지 */
-    list-style-type: none; /* 기본 목록 스타일 제거 */
-    padding: 0; /* 패딩 제거 */
-    margin: 0; /* 마진 제거 */
-    transition: transform 0.5s ease; /* 부드러운 이동 효과 */
-}
-
-.logo-slider li {
-    margin: 0 15px; /* 로고 간격 조정 */
-}
-
-.logo-slider img {
-    width: 100px; /* 로고 크기 조정 */
-    height: auto; /* 비율 유지 */
-}
-
-/* 슬라이더 복제 시 CSS 추가 */
-.logo-slider.cloned {
-    flex-basis: 100%; /* 복제된 슬라이더에 비율 설정 */
-}
-
-/* 모바일에서의 스타일 조정 */
-@media (max-width: 768px) {
-    .logo-slider li {
-        margin: 0 30px; /* 모바일에서 로고 간격 조정 */
-    }
-
-    .logo-slider img {
-        width: 120px; /* 모바일에서 로고 크기 조정 */
-    }
-}
-
-/* 빌런을 만난 히어로들 끝*/
-
-
 /* Contact 문의 섹션 */
 .contact-section {
     background-color: #F5F5F5;
     padding: 50px;
-    text-align: center;
 }
 
 .contact-text p {
@@ -330,8 +129,6 @@ body > main > section.contact-section > div.container{
 
 .contact-container {
     display: flex;
-    justify-content: center; /* 중앙 정렬 */
-    align-items: center;
 }
 
 .contact-form-area {
@@ -415,6 +212,9 @@ body > main > section.contact-section > div.container{
     .contact-text p {
         font-size: 16px; /* 모바일에서 글꼴 크기 조정 */
         line-height: 1.5;
+    }
+    .contact-form{
+        width: 100%;
     }
 }
 
@@ -577,3 +377,18 @@ textarea {
   .custom-checkbox input[type="checkbox"]:checked ~ .checkmark::after {
     display: block;
   }
+
+  .imgsample img {
+    display: block;         /* 필요 시 블록 요소로 취급 */
+    max-width: 400px;       /* 가로 최대 800px 제한 */
+    width: 100%;            /* 부모 너비에 맞추되, 800px 이상은 커지지 않음 */
+    height: auto;           /* 세로 비율 자동 유지 */
+  }
+  
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+footer{text-align: center;
+margin: 10px 0px 10px 0px;}
